@@ -1,0 +1,50 @@
+/* HEADLINE SECTION */
+
+.headline-section {
+  margin-top: 100px;
+  padding: 0 10px;
+  background-image: url('../assets/bg-2.png');
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.greetings {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.event-theme {
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-size: 33px;
+  font-weight: 900;
+  background-image: url('../assets/bg-text-orange.jpg');
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-intro {
+  background-color: whitesmoke;
+  padding: 10px;
+  border: 4px solid white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+}
+
+.date {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+.place {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-color);
+}
