@@ -61,3 +61,36 @@
   letter-spacing: 0.02em;
   text-decoration-line: underline;
 }
+
+/* ===================LOGO SECTION==================== */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  padding-bottom: 30px;
+}
+
+.logo-title {
+  color: #333;
+  text-align: center;
+}
+
+.logo-section p {
+  padding: 0 50px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  color: #838383;
+}
+
+.summit-logo {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(214, 213, 213);
+}
+
+.summit-logo img {
+  width: 180px;
+}
