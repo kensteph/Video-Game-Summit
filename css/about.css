@@ -7,7 +7,7 @@
   padding: 0 20px;
   background-image: url('../assets/bg-2.png');
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .greetings {
@@ -93,4 +93,64 @@
 
 .summit-logo img {
   width: 180px;
+}
+
+/* ======================PAST SUMMIT SECTION======================== */
+
+.past-summit-section {
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid rgb(214, 213, 213);
+}
+
+.past-summit-section p {
+  font-size: 13px;
+  text-align: center;
+  color: #838383;
+}
+
+.events {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(248, 9, 9, 0.551);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 14px;
+  color: white;
+}
+
+.text h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: white;
 }
