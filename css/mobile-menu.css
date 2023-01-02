@@ -31,7 +31,7 @@ nav {
 }
 
 #hide-menu-btn {
-  color: var(--accent-color1);
+  color: var(--accent-color-menu);
   font-size: 30px;
   position: fixed;
   cursor: pointer;
@@ -60,7 +60,7 @@ nav {
   text-decoration: none;
   font-size: 25px;
   font-weight: 600;
-  color: var(--accent-color1);
+  color: var(--accent-color-menu);
 }
 
 .btn-campaign {
@@ -68,7 +68,7 @@ nav {
   text-align: center;
   text-decoration: none;
   padding: 20px;
-  background-color: var(--accent-color1);
+  background-color: var(--accent-color-menu);
   font-size: 20px;
   color: white;
   border: none;
