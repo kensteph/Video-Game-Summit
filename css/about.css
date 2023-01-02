@@ -154,3 +154,25 @@
   font-weight: 900;
   color: white;
 }
+
+/* =====================FOOTER====================== */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: white;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.copy-rights {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: -0.01em;
+  color: #3b3e45;
+}

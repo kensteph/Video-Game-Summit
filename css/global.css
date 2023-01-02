@@ -44,3 +44,30 @@ header {
   background-color: var(--accent-color);
   margin-top: 0;
 }
+
+/* PARTNER SECTION */
+.partner-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(65, 66, 70);
+  padding-bottom: 30px;
+}
+
+.partner-title {
+  color: var(--link-menu-color);
+  font-weight: 400;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.partners img {
+  width: 90px;
+}
