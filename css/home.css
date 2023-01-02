@@ -256,3 +256,145 @@
 .show-speaker {
   display: flex;
 }
+
+/* Hide the PARTNER section and the footer for mobile version */
+footer,
+#partners {
+  display: none;
+}
+
+/* ========================================== DESKTOP ========================= */
+
+@media only screen and (min-width: 768px) {
+  /* Show the PARTNER section and the footer for mobile version */
+  footer,
+  #partners {
+    display: flex;
+  }
+
+  /* HEADING SECTION */
+  .headline-section {
+    display: flex;
+    padding: 10% 25% 10%;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  .greetings {
+    font-size: 50px;
+  }
+
+  .event-theme {
+    font-size: 90px;
+    margin-bottom: 10px;
+  }
+
+  .text-intro {
+    width: 70%;
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .date {
+    font-size: 40px;
+  }
+
+  .place {
+    font-size: 20px;
+  }
+
+  /* SECTION TITLE */
+  .title {
+    font-size: 25px;
+  }
+
+  /* ======================= MAIN PROGRAM ================================ */
+  .main-program-section {
+    width: 100%;
+    padding: 5% 25% 5%;
+  }
+
+  .program-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .program-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 0;
+  }
+
+  .image-text {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .program-description {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .btn-join {
+    display: none;
+  }
+
+  .see-program-link {
+    display: block;
+    color: whitesmoke;
+  }
+
+  /* ============================FEATURED SECTION=============================== */
+
+  .feature-speakers-section {
+    width: 100%;
+    padding: 2% 25% 5%;
+  }
+
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+
+  /* Select all the speakers starting at 3 */
+  .speaker:nth-child(n + 3) {
+    display: flex;
+  }
+
+  .btn-more {
+    display: none;
+  }
+
+  /* PARTNER SECTION */
+  .partner-section {
+    width: 100%;
+  }
+
+  .partners {
+    gap: 100px;
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    padding: 2% 10% 2% 2%;
+    gap: 90px;
+  }
+
+  .footer-logo {
+    width: 250px;
+    font-weight: 600;
+  }
+
+  .copy-rights {
+    font-size: 15px;
+  }
+}

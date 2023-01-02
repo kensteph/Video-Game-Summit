@@ -155,24 +155,142 @@
   color: white;
 }
 
-/* =====================FOOTER====================== */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 10px;
-  background-color: white;
-  gap: 10px;
-}
+/* ===================================== DESKTOP =================================== */
+@media only screen and (min-width: 768px) {
+  /* HEADLINE SECTION */
+  .headline-section {
+    height: 80vh;
+    padding: 5% 25% 5%;
+  }
 
-.footer-logo {
-  width: 200px;
-}
+  .greetings {
+    display: none;
+  }
 
-.copy-rights {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 13px;
-  letter-spacing: -0.01em;
-  color: #3b3e45;
+  .event-theme {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .line {
+    display: block;
+    width: 5%;
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    margin-top: 0;
+  }
+
+  .text-intro {
+    padding: 2% 5%;
+    margin-top: 10%;
+    font-size: 15px;
+    line-height: 40px;
+  }
+
+  .contact {
+    padding: 0 20px;
+    font-size: 16px;
+    margin-top: 10%;
+  }
+
+  .email {
+    margin-top: 2%;
+    font-size: 16px;
+  }
+
+  .title {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  .title hr {
+    width: 30px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    margin-top: 0;
+  }
+
+  /* LOGO SECTION */
+  .logo-section {
+    padding: 1% 20% 5% 20%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-title {
+    font-size: 25px;
+  }
+
+  .logo-section p {
+    padding: 0 50px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .summit-logo {
+    width: 40%;
+    padding: 30px;
+    margin-top: 25px;
+  }
+
+  .summit-logo img {
+    width: 100%;
+  }
+
+  /* PAST SUMMIT SECTION */
+
+  .past-summit-section {
+    padding: 2% 25% 5%;
+  }
+
+  .past-summit-section p {
+    font-size: 15px;
+  }
+
+  .events {
+    margin-top: 50px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .img-container {
+    width: 100% !important;
+  }
+
+  .img-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    cursor: pointer;
+    filter: grayscale(100%);
+  }
+
+  /* PARTNER SECTION */
+  .partner-section {
+    width: 100%;
+  }
+
+  .partners {
+    gap: 100px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2% 25% 5%;
+    justify-content: flex-start;
+    background-color: #2e2e2e;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    width: 250px;
+  }
+
+  .copy-rights {
+    font-size: 13px;
+    color: var(--link-menu-color);
+  }
 }
