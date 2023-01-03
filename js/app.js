@@ -61,7 +61,7 @@ mobileMenuLinks.forEach((li) => {
   li.addEventListener('click', hideMenu);
 });
 
-// ======== Generate the speaker dynamically ==================
+// ======== Generate the speakers dynamically ==================
 const spakers = [
   {
     fullname: 'Yochai Benkler',
@@ -193,8 +193,8 @@ const showHidenSpeaker = () => {
       speaker.classList.remove('show-speaker');
       speaker.classList.toggle('hide-speaker');
       btnText.textContent = 'MORE';
-      btnChevron.classList.remove('fa-chevron-down');
-      btnChevron.classList.add('fa-chevron-up');
+      btnChevron.classList.remove('fa-chevron-up');
+      btnChevron.classList.add('fa-chevron-down');
     }
   });
 };
