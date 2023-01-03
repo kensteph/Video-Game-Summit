@@ -3,8 +3,8 @@
 /* ===================HEADLINE SECTION====================== */
 
 .headline-section {
-  margin-top: 100px;
-  padding: 0 20px;
+  margin-top: 0;
+  padding: 60px 20px;
   background-image: url('../assets/bg-2.png');
   background-size: cover;
   background-repeat: no-repeat;

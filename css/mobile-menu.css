@@ -4,6 +4,7 @@ nav {
 }
 
 #menu-icon {
+  position: absolute;
   font-size: 35px;
   color: var(--primary-color);
   cursor: pointer;

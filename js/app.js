@@ -9,13 +9,13 @@ const createMobileMenu = () => {
   <i class="fa fa-close" id="hide-menu-btn"></i>
   <div class="mobile-menu">
     <ul id="mobile-menu-links">
-      <li><a href="./about.html" rel="noopenner">About</a></li>
-      <li><a href="#" rel="noopenner">Program</a></li>
-      <li><a href="#" rel="noopenner">Join</a></li>
-      <li><a href="#" rel="noopenner">Sponsor</a></li>
-      <li><a href="#" rel="noopenner">News</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="#main-program">Program</a></li>
+      <li><a href="#">Join</a></li>
+      <li><a href="#">Sponsor</a></li>
+      <li><a href="#">News</a></li>
     </ul>
-    <a class="btn-campaign" href="#" rel="noopenner">VG Campaign</a>
+    <a class="btn-campaign" href="#">VG Campaign</a>
   </div>`;
   if (modal != null) modal.innerHTML = homeMenu;
 
@@ -23,13 +23,13 @@ const createMobileMenu = () => {
     <i class="fa fa-close" id="hide-menu-btn"></i>
     <div class="mobile-menu">
       <ul id="mobile-menu-links">
-        <li><a href="./index.html" rel="noopenner">Home</a></li>
-        <li><a href="#" rel="noopenner">Program</a></li>
-        <li><a href="#" rel="noopenner">Join</a></li>
-        <li><a href="#" rel="noopenner">Sponsor</a></li>
-        <li><a href="#" rel="noopenner">News</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./#main-program">Program</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Sponsor</a></li>
+        <li><a href="#">News</a></li>
       </ul>
-      <a class="btn-campaign" href="#" rel="noopenner">VG Campaign</a>
+      <a class="btn-campaign" href="#">VG Campaign</a>
     </div>`;
   if (modalAbout != null) modalAbout.innerHTML = aboutMenu;
 };
@@ -39,6 +39,8 @@ createMobileMenu();
 const menuIcon = document.querySelector('#menu-icon');
 // Target the elements from the mobile menu
 const hideMenuBtn = document.querySelector('#hide-menu-btn');
+const mobileMenu = document.querySelector('#mobile-menu-links');
+const mobileMenuLinks = mobileMenu.querySelectorAll('li');
 
 const showMenu = () => {
   modal.classList.remove('hide-menu');
@@ -54,6 +56,10 @@ const hideMenu = () => {
 };
 menuIcon.addEventListener('click', showMenu);
 hideMenuBtn.addEventListener('click', hideMenu);
+
+mobileMenuLinks.forEach((li) => {
+  li.addEventListener('click', hideMenu);
+});
 
 // ======== Generate the speaker dynamically ==================
 const spakers = [
@@ -141,27 +147,57 @@ const genSpeaker = () => {
 <div class="speakers">${speakersElement}</div>
 
   <button type="button" class="btn-more" type="button" id="btn-more">
-    MORE <i class="fa fa-chevron-down"></i>
+    <span>MORE</span> <i class="fa fa-chevron-down"></i>
   </button>
 </div>
   `;
 
-  featureSpeakers.innerHTML = featuredSection;
+  if (featureSpeakers != null) featureSpeakers.innerHTML = featuredSection;
 };
 genSpeaker();
 
-// SHOW the hidden speakers
+// ANIMATIONS
+const spinning = [
+  { transform: 'rotate(0) scale(1)' },
+  { transform: 'rotate(360deg) scale(0)' },
+];
 
+const timing = {
+  duration: 2000,
+  iterations: 1,
+};
+
+// Animate the MAIN PROGRAM section
+const mp = document.querySelector('.program-container');
+if (mp != null) mp.animate(spinning, timing);
+
+// Target the more button
+const btnMore = document.querySelector('#btn-more');
+// SHOW the hidden speakers
 const showHidenSpeaker = () => {
+  const btnText = btnMore.querySelector('span');
+  const btnChevron = btnMore.querySelector('i');
   // Target the last speakers starting at position 3
   const lastSpeakers = document.querySelectorAll('.speaker:nth-child(n+3)');
   // Loop over them
   lastSpeakers.forEach((speaker) => {
-    speaker.classList.remove('hide-speaker');
-    speaker.classList.add('show-speaker');
+    // Add animation
+    speaker.animate(spinning, timing);
+    if (speaker.classList.contains('hide-speaker')) {
+      speaker.classList.remove('hide-speaker');
+      speaker.classList.add('show-speaker');
+      btnText.textContent = 'LESS';
+      btnChevron.classList.remove('fa-chevron-down');
+      btnChevron.classList.add('fa-chevron-up');
+    } else {
+      speaker.classList.remove('show-speaker');
+      speaker.classList.toggle('hide-speaker');
+      btnText.textContent = 'MORE';
+      btnChevron.classList.remove('fa-chevron-down');
+      btnChevron.classList.add('fa-chevron-up');
+    }
   });
 };
 
 // Add event on btn-more
-const btnMore = document.querySelector('#btn-more');
-btnMore.addEventListener('click', showHidenSpeaker);
+if (btnMore != null) btnMore.addEventListener('click', showHidenSpeaker);
